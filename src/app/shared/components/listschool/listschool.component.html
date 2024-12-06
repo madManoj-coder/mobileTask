@@ -1,0 +1,9 @@
+
+<mat-list>
+    <mat-list-item *ngFor="let school of schoole" (click)="onselectschoole(school)">
+{{school.school_name}}
+    </mat-list-item>
+</mat-list>
+<app-school-detail *ngIf="selectedSchooole" [school]="selectedSchooole">
+
+</app-school-detail>

@@ -1,0 +1,27 @@
+<mat-card *ngIf="school">
+<mat-card-header>
+    <mat-card-title>
+        {{school.school_name}}
+    </mat-card-title>
+</mat-card-header>
+<mat-card-content>
+    <P><strong>adddress:</strong>{{school.location}}</P>
+    <P><strong>city:</strong>{{school.city}}</P>
+    <P><strong>zipcode:</strong>{{school.zipcode}}</P>
+    <P><strong>phone:</strong>{{school.phone_number}}</P>
+
+    <div *ngIf="satscores.length
+    "
+    >
+<h3>
+    sat scores
+</h3>
+
+<p><strong>math:</strong>{{satscores[0]?.math_avg_score}}</p>
+<p><strong>reading:</strong>{{satscores[0]?.reading_avg_score}}</p>
+<p><strong>writing:</strong>{{satscores[0]?.writing_avg_score}}</p>
+
+
+</div>
+</mat-card-content>
+</mat-card>
